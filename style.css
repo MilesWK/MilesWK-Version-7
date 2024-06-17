@@ -1,0 +1,219 @@
+/*
+
+Hi! Checking out the CSS. eh? Well, I added
+comments to help you understand it all! (Your welcome)
+
+*/
+
+/* 
+
+This sets the entire page to a sans-serif font. 
+Actually, it only sets everything in the <body> section of this page.
+
+*/
+
+body {
+  font-family: sans-serif;
+  background-color: #121212;
+}
+
+
+/* 
+
+These are the animations. 
+
+The first animation is for the letter M.
+
+*/
+
+@keyframes M {
+  0% {
+      transform: scaleX(1);
+  }
+  10% {
+      transform: scaleX(2);
+  }
+  20% {
+      transform: scaleX(1);
+  }
+  40% {
+      transform: rotate(0deg);
+  }
+  50% {
+      transform: rotate(360deg);
+  }
+  60% {
+      transform: rotate(0deg);
+  }
+  70% {
+      transform: skewY(0deg);
+  }
+  80% {
+      transform: skewY(40deg);
+  }
+  90% {
+      transform: skewY(0deg);
+  }
+}
+
+/* This is the animation for the letters for "iles"*/ 
+@keyframes iles {
+  0% {
+    transform: scaleY(1);
+  }
+  10% {
+    transform: scaleY(2);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: skewX(0deg);
+  }
+  80% {
+    transform: skewX(40deg);
+  }
+  90% {
+    transform: skewX(0deg);
+  }
+}
+/* This is the animation for the letters "WK"*/
+@keyframes WK {
+  10%{
+    transform: rotate(180deg)
+  }
+  20%{
+    transform: rotate(480deg)
+  }
+  30%{
+    transform: rotate(1000deg)
+  }
+  40%{
+    transform: rotate(180deg)
+  }
+  50%{
+    transform: rotate(0deg)
+  }
+  60%{
+    transform: translateY(-35px);
+  }
+  70%{
+    transform: translateX(35px);
+  }
+  80%{
+    transform: translateY(35px);
+  }
+}
+
+/* This sets the background around the header*/
+@keyframes comein {
+  from {
+    opacity: 0;
+  }
+  to  {
+    opacity: 1;
+  }
+}
+#header {
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* 
+These three apply the animations to the letters. 
+*/
+
+#M{position: relative;animation: M 10s infinite ease-in-out;transition: color 1s ease-in-out;}
+#iles{position: relative;animation: iles 10s infinite ease-in-out 2s;transition: color 1s ease-in-out;}
+#WK{position: relative;animation: WK 10s infinite ease-in-out 3s;transition: color 1s ease-in-out;}
+
+#M:hover, #iles:hover, #WK:hover{
+  color: green;
+}
+
+#links {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.link {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  border-radius: 30px;
+  text-align: center;
+  transition: width 0.7s ease-in-out;
+}
+
+.link:hover{
+  width: 50%
+}
+
+.content {
+  height: auto;
+  opacity: 0;
+  animation: comein 3s ease-in-out forwards;
+  color: white;
+  padding: 20px;
+  background-color: black;
+  border-radius: 30px;
+  margin: 10px;
+}
+p { font-size: 16px;}
+a {color: white; font-weight: bold; text-decoration: underline;}
+
+.project {
+  align-items: horizontal; 
+  
+}
+
+img {
+  width: 40%; height: auto;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  object-fit: cover;
+}
+.img-right:hover {
+  transform: skewX(6deg);
+  transform: skewY(6deg);
+  filter: drop-shadow(16px 16px 20px white) ;
+  
+}
+.img-left:hover {
+  transform: skewX(-6deg);
+  transform: skewY(-6deg);
+  filter: drop-shadow(16px 16px 20px white) ;
+  
+}
+
+#main-content{
+  margin-left: 20%;
+  margin-right: 20%
+}
+.right-content {
+  position: right; width: 40%; height: auto; text-align: center;
+}
+.left-content {
+  position: right; width: 40%; height: auto; text-align: center;
+}
